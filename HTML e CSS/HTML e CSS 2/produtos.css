@@ -1,0 +1,94 @@
+header {
+    background: #BBBBBB;
+    padding: 20px 0; /**Forma abreviada de dar os valores das margens, sendo que para cima e para baixo a margem é 20px e para a direita e para esquerda a margem é 0.**/
+}
+
+.caixa {
+    position: relative; /**Quando se quer que um elemento que tem um posicionamento absoluto esteja dentro de uma "caixa", é necessário que essa caixa "levante", colocando-a com um posicionamento relativo. Com isso, o elemento com posicionamento absoluto passa a ser absoluto em relação à caixa.**/
+    width: 940px; /**Largura padrão da web**/
+    margin: 0 auto; /**Forma abreviada de dar os valores das margens, sendo que para cima e para baixo a margem é 0 e para a direita e para esquerda a margem é "auto", que é o comando para que elas se calculem automaticamente.**/
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+    /** No "margin" precisa-se informar sobre todos os lados. Por isso a ordem é topo, direita, baixo, esquerda. Esse comando é o que criará os espaçamentos entre os itens da lista.**/
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+/** Aqui se usou "nav a" porque se quer alterar o texto que está dentro dessa classe, considerando que cada texto está dentro de uma TAG "<a>".**/
+
+nav a:hover {
+    color: #C78C19;
+    text-decoration: underline;
+}
+/**Esse é o comando que determina as questões ligadas à passagem do mouse sobre os elementos que possuem links ou de qualquer outro tipo que desejarmos.**/
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /**O navegador soma o percentual mais os pixels. Com esse comando, o navegador entende que a largura será sempre o percentual de 30% (definido acima) e que os pixels (30 e 20) devem ocorrer apenas dentro da caixa, e não se somar à sua largura.**/
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    border-color:#C78C19;
+    font-size: 34px;
+}
+
+.produtos li:active {
+    border-color: #088C19;
+}
+
+.produtos li:hover h2 {
+    font-size: 40px;
+}
+/**Aqui o comando pede para quando o mouse estiver por cima dos produtos, o título deles aumentar para 40 px.**/
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+footer {
+    text-align: center;
+    background: url("bg.jpg");/**Aqui se criou um fundo no rodapé a partir de uma imagem salva no computador. Ela não consta no html, apenas aqui em CSS. Quando uma imagem é incluída pelo CSS, ela se repete até ocupar toda a extensão da página, ao invés de aumentar a imagem até caber.**/
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0;
+}
