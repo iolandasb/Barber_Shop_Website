@@ -1,4 +1,4 @@
-# HTML-CSS
+# HTML_CSS
 Website creation using HTML and CSS concepts.
 
 # Conceitos e Funcionalidades
