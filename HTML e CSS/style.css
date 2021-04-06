@@ -1,0 +1,267 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+} /*<!--Essa linha foi retirada do site de fontes https://fonts.google.com/, o qual possui uma lista de fontes preparadas para web (existem fontes que não o são, mas não são adequadas). Lá é possível pegar os códigos HTML e CSS de uma fonte para aplicá-la na página da web.-->*/
+
+header {
+    background: #BBBBBB;
+    padding: 20px 0; /**Forma abreviada de dar os valores das margens, sendo que para cima e para baixo a margem é 20px e para a direita e para esquerda a margem é 0.**/
+}
+
+.caixa {
+    position: relative; /**Quando se quer que um elemento que tem um posicionamento absoluto esteja dentro de uma "caixa", é necessário que essa caixa "levante", colocando-a com um posicionamento relativo. Com isso, o elemento com posicionamento absoluto passa a ser absoluto em relação à caixa.**/
+    width: 940px; /**Largura padrão da web**/
+    margin: 0 auto; /**Forma abreviada de dar os valores das margens, sendo que para cima e para baixo a margem é 0 e para a direita e para esquerda a margem é "auto", que é o comando para que elas se calculem automaticamente.**/
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+    /** No "margin" precisa-se informar sobre todos os lados. Por isso a ordem é topo, direita, baixo, esquerda. Esse comando é o que criará os espaçamentos entre os itens da lista.**/
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+/** Aqui se usou "nav a" porque se quer alterar o texto que está dentro dessa classe, considerando que cada texto está dentro de uma TAG "<a>".**/
+
+nav a:hover {
+    color: #C78C19;
+    text-decoration: underline;
+}
+/**Esse é o comando que determina as questões ligadas à passagem do mouse sobre os elementos que possuem links ou de qualquer outro tipo que desejarmos.**/
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /**O navegador soma o percentual mais os pixels. Com esse comando, o navegador entende que a largura será sempre o percentual de 30% (definido acima) e que os pixels (30 e 20) devem ocorrer apenas dentro da caixa, e não se somar à sua largura.**/
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    border-color:#C78C19;
+    font-size: 34px;
+}
+
+.produtos li:active {
+    border-color: #088C19;
+}
+
+.produtos li:hover h2 {
+    font-size: 40px;
+}
+/**Aqui o comando pede para quando o mouse estiver por cima dos produtos, o título deles aumentar para 40 px.**/
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+footer {
+    text-align: center;
+    background: url("bg.jpg");/**Aqui se criou um fundo no rodapé a partir de uma imagem salva no computador. Ela não consta no html, apenas aqui em CSS. Quando uma imagem é incluída pelo CSS, ela se repete até ocupar toda a extensão da página, ao invés de aumentar a imagem até caber.**/
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all; /**Esse comando faz com que todas as características da classe "enviar" sofram alterações (que constam em ".enviar:hover" após 1 segundo.**/
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background: darkorange;
+    transform: scale(1.2) /**rotate(70deg)**/; /**Esse comando faz com que a classe "enviar" tenha todas as suas características aumentadas em 20% (representado pelo 1.2) quando se passar o mouse por cima do elemento (devido ao comando hover). Além disso, o elemento também rotaciona em 20 graus quando o mouse passar por ele. No entanto este último item foi ocultado pois era só um exemplo.**/
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px
+}
+
+/*CSS da página inicial*/
+.banner {
+    width: 100%;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em; /*•	"em" representa o tamanho da fonte (letra) padrão. Se for colocado, por exemplo, 2em, então a letra terá 2x o tamanho da fonte padrão (que é medida em pixel. Então se a padrão for 15px, essa será 30px).*/
+    margin: 0 0 1em;
+    clear: left;  /*Esse comando limpa a influência o "float" sobre essa classe, que no caso está em "left"*/
+    /*color: rgba(0,0,0, 0.3); O comando "rgba" confere além da cor descrita pelo "rgb", uma opacidade à cor descrita por "a" (que vai de 1 (sem opacidade) a 0 (máximo de opacidade)). O comando foi retirado do programa, era apenas exemplificaivo.*/
+    /*text-shadow: 2px 2px #FF0000; É igual ao comando "box-shadow", porém para texto. O comando foi retirado do programa, era apenas exemplificaivo.*/
+}
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {  /*Aqui o "em" não é igual o acima, aqui ele se refere ao itálico do documento "index.html"*/
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px; 
+    float: left; /*"float" é uma forma de diagramação, que possui uma espécie de "sombra" sobre o bloco ou imagem, fazendo com que o texto não entre nessa "sombra".*/
+    margin: 0 20px 20px 0; /*Ordem dos comandos: cima, direita, baixo, esquerda*/
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.itens:before {
+    content: "🟊";/*A estrela foi obtida no site "http://xahlee.info/comp/unicode_stars.html". O "before" coloca esse caracter antes dos itens da lista.*/
+}
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 0 #000000;
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.3;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+
+@media screen and (max-width: 480px) { /*Esse comando altera a tela para adaptar ao uso no celular. Cada alteração contempla grupos de elementos (descritos por classes, ids, TAGs, etc) e se aplica a eles.*/
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+    h1 {
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+}
