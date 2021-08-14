@@ -1,4 +1,4 @@
-# HTML_CSS
+# Barber Shop Website
 Website creation using HTML and CSS concepts.
 
 # Conceitos e Funcionalidades
